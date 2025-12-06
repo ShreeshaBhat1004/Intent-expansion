@@ -1,0 +1,381 @@
+{
+  "stats": {
+    "total_messages": 200,
+    "num_clusters": 15,
+    "silhouette_score": 0.301,
+    "llm_enabled": true
+  },
+  "suggestions": [
+    {
+      "cluster_id": 1,
+      "cluster_size": 9,
+      "cluster_fraction": 0.045,
+      "top_terms": [
+        "spray",
+        "rice",
+        "rice water",
+        "water",
+        "water hair",
+        "growth spray",
+        "rosemary",
+        "hair growth"
+      ],
+      "example_messages": [
+        "Add to cart - Rosemary & Rice Water Hair Growth Spray",
+        "What's special about it? Rosemary & Rice Water Hair Growth Spray",
+        "How to use it in daily routine? Rosemary & Rice Water Hair Growth Spray",
+        "Isko kaise use kare? Rosemary & Rice Water Hair Growth Spray",
+        "How to use it in daily routine? Rosemary & Rice Water Hair Growth Spray"
+      ],
+      "suggested_intent_name": "product_specific_usage",
+      "suggested_intent_description": "This intent captures customer inquiries about the usage, application, or special features of a specific product, such as the Rosemary & Rice Water Hair Growth Spray.",
+      "matched_existing_intent": null,
+      "match_similarity": 0.094,
+      "recommendation": "NEW_INTENT_CANDIDATE",
+      "justification": "Cluster does not match any existing intent well (best similarity=0.09). Potential new intent covering 9 messages."
+    },
+    {
+      "cluster_id": 0,
+      "cluster_size": 120,
+      "cluster_fraction": 0.6,
+      "top_terms": [
+        "shampoo",
+        "oil",
+        "body",
+        "hai",
+        "hair",
+        "special",
+        "dandruff",
+        "skin"
+      ],
+      "example_messages": [
+        "Best for oily skin",
+        "Mera order confirm ho gaya hai",
+        "Others details ",
+        "What's special about it? Ultra Smoothing Shampoo for Smooth & Shiny Hair- 250ml",
+        "Seee results "
+      ],
+      "suggested_intent_name": "product_specialty_request",
+      "suggested_intent_description": "This intent captures customer inquiries about the specific benefits, features, or suitability of a product for their needs, often related to hair or skin concerns.",
+      "matched_existing_intent": {
+        "primary": "Recommendation",
+        "secondary": "Seeking Solution",
+        "description": "When customer asks recommendation for a product/category for their skin/hair type."
+      },
+      "match_similarity": 0.207,
+      "recommendation": "CONSIDER_SPLIT",
+      "justification": "Cluster partially overlaps with 'Seeking Solution' (similarity=0.21). Consider creating a sub-intent."
+    },
+    {
+      "cluster_id": 3,
+      "cluster_size": 14,
+      "cluster_fraction": 0.07,
+      "top_terms": [
+        "order",
+        "cancel",
+        "rto",
+        "10",
+        "means",
+        "refund",
+        "didn",
+        "water hair"
+      ],
+      "example_messages": [
+        "When the order will be shipped",
+        "My order company name ",
+        "where is my order",
+        "Where is my order ",
+        "3235368 &&order id"
+      ],
+      "suggested_intent_name": "order_cancel_rto",
+      "suggested_intent_description": "",
+      "matched_existing_intent": {
+        "primary": "About Product",
+        "secondary": "Place Order",
+        "description": "When the customer asks how to place an order."
+      },
+      "match_similarity": 0.978,
+      "recommendation": "MAPS_TO_EXISTING",
+      "justification": "Cluster maps well to existing intent 'Place Order' (similarity=0.98)."
+    },
+    {
+      "cluster_id": 2,
+      "cluster_size": 11,
+      "cluster_fraction": 0.055,
+      "top_terms": [
+        "track order",
+        "track",
+        "order",
+        "water hair",
+        "water 30",
+        "water",
+        "wash lactic",
+        "wash"
+      ],
+      "example_messages": [
+        "How to track order?",
+        "How to track order?",
+        "How to track order",
+        "How to track order?",
+        "How to track order?"
+      ],
+      "suggested_intent_name": "track_order_track_order",
+      "suggested_intent_description": "",
+      "matched_existing_intent": {
+        "primary": "About Product",
+        "secondary": "Place Order",
+        "description": "When the customer asks how to place an order."
+      },
+      "match_similarity": 0.492,
+      "recommendation": "MAPS_TO_EXISTING",
+      "justification": "Cluster maps well to existing intent 'Place Order' (similarity=0.49)."
+    }
+  ],
+  "existing_intents": [
+    {
+      "primary_id": "basic_interactions",
+      "primary_name": "Basic Interactions",
+      "secondary_id": "greetings",
+      "secondary_name": "Greetings",
+      "description": "When a customer gives greetings only like Hi, hello, thank you etc."
+    },
+    {
+      "primary_id": "basic_interactions",
+      "primary_name": "Basic Interactions",
+      "secondary_id": "acknowledgment",
+      "secondary_name": "Acknowledgment",
+      "description": "When a customer gives acknowledgment only like Ok, Thanks, Got it, Alright etc."
+    },
+    {
+      "primary_id": "about_company",
+      "primary_name": "About Company",
+      "secondary_id": "contact_details",
+      "secondary_name": "Contact Details",
+      "description": "When a customer asks about the company's contact specifically."
+    },
+    {
+      "primary_id": "about_company",
+      "primary_name": "About Company",
+      "secondary_id": "about_team",
+      "secondary_name": "About Team",
+      "description": "When a customer asks about the team."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "effectiveness",
+      "secondary_name": "Unsure About Effectiveness",
+      "description": "When the customer is not sure about the effectiveness of the product."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "product_ingredients",
+      "secondary_name": "Product Ingredients",
+      "description": "When customer asks about the ingredients of a product."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "pricing",
+      "secondary_name": "Pricing",
+      "description": "When the message is related to the price of a product."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "no_query_uc",
+      "secondary_name": "No More Product Query",
+      "description": "When the customer's message indicates they have no further questions about the product."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "all_product",
+      "secondary_name": "All Products",
+      "description": "When the message is related to all products that company provides."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "payment_options_available",
+      "secondary_name": "Payment Options Available",
+      "description": "When the customer asks about payment options available."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "certification",
+      "secondary_name": "Certification",
+      "description": "When customer asks for product certification or if it is harmful chemical free."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "place_order",
+      "secondary_name": "Place Order",
+      "description": "When the customer asks how to place an order."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "comparison",
+      "secondary_name": "Comparison",
+      "description": "When the message is related to comparing one product with another product."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "out_of_stock",
+      "secondary_name": "Out of Stock",
+      "description": "When customer says product is out of stock or can't find it on website."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "product_info",
+      "secondary_name": "Product Info",
+      "description": "When the customer wants to know how to use etc or says yes to a question about how to use by the agent."
+    },
+    {
+      "primary_id": "specific_product",
+      "primary_name": "About Product",
+      "secondary_id": "product_speciality_uc",
+      "secondary_name": "Product Specialty",
+      "description": "When customer asks specialty or benefits of a product or says yes to a question about specialty prompted by the agent."
+    },
+    {
+      "primary_id": "recommendation",
+      "primary_name": "Recommendation",
+      "secondary_id": "customer_problem",
+      "secondary_name": "Customer Problem",
+      "description": "When the customer talks about a personal issue, concern, or challenge they are facing (which could be related to the product but doesn't involve expressing dissatisfaction or frustration)."
+    },
+    {
+      "primary_id": "recommendation",
+      "primary_name": "Recommendation",
+      "secondary_id": "customer_information",
+      "secondary_name": "Customer Concern Related Information",
+      "description": "When the customer shares their details like concern etc for product recommendation."
+    },
+    {
+      "primary_id": "recommendation",
+      "primary_name": "Recommendation",
+      "secondary_id": "seeking_solution",
+      "secondary_name": "Seeking Solution",
+      "description": "When customer asks recommendation for a product/category for their skin/hair type."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "address_change",
+      "secondary_name": "Address Change",
+      "description": "When the customer asks about changing the address of the order."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "wrong_order",
+      "secondary_name": "Wrong/Damaged Order",
+      "description": "When the customer mentions that they received a wrong order/incorrect order or damaged order or missing product or the customer wants to exchange the product."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "order_delivered_but_not_received",
+      "secondary_name": "Marked Delivered, Not Received",
+      "description": "Only applicable when the customer reports that the tracking/portal shows their order as 'delivered,' but they have not actually received the package."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "b2b_queries",
+      "secondary_name": "B2B Queries",
+      "description": "When the customer asks about B2B queries like placing bulk order or talks about distribution."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "refund_policy",
+      "secondary_name": "Refund Policy",
+      "description": "When a customer asks for the status of their refund/or when they will get their refund amount."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "refund_required",
+      "secondary_name": "Refund Required",
+      "description": "When a customer asking you to give refund or asking about refund policy."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "cancellation",
+      "secondary_name": "Cancellation",
+      "description": "When the customer asks about the cancellation policy for any product."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "payment",
+      "secondary_name": "Payment Related Issues",
+      "description": "When the customer talks about payment is failed but their money is deducted, or they are having trouble with payment."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "ecommerce_quick_commerce",
+      "secondary_name": "E-commerce/Quick Commerce",
+      "description": "When the customer asks about the availability of the product on e-commerce platforms."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "feedback",
+      "secondary_name": "Feedback",
+      "description": "When the customer is complaining or giving feedback about a product/service or delivery."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "order_status",
+      "secondary_name": "Order Status",
+      "description": "When the customer talks about the status of an order, or asks for order tracking, or delay in delivery."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "discount",
+      "secondary_name": "Discount",
+      "description": "When the customer asks about offers or discounts available for a product."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "talk_to_agent",
+      "secondary_name": "Talk to Agent",
+      "description": "When the customer is explicitly asking to wants to connect with a live agent or want to talk to a human."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "return_policy",
+      "secondary_name": "Return Policy",
+      "description": "When a customer asks for the return policy for any product."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "complaint",
+      "secondary_name": "Complaint",
+      "description": "When the customer expresses a complaint, concern, dissatisfaction, frustration, or disappointment regarding a skincare product or service—including mentions of the product not working, being ineffective, causing irritation, having poor results, or not meeting their expectations. Damaged order and wrong order received is not considered as complaint."
+    },
+    {
+      "primary_id": "logistics",
+      "primary_name": "Logistics",
+      "secondary_id": "website_issue",
+      "secondary_name": "Website Issue",
+      "description": "When the customer reports any issue related to the website, such as errors, loading problems, or when they are unable to place an order."
+    }
+  ]
+}
